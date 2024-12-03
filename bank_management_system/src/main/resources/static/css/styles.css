@@ -1,0 +1,579 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(199, 205, 210);
+}
+
+main {
+    display: flex;
+}
+
+/* CSS for the transfer page */
+.left-side-nav {
+    width: 16%;
+    background-color: blue;
+    height: 100vh;
+    padding-left: 0px;
+}
+
+ul {
+    margin-left: 0;
+    width: 100%;
+}
+
+li {
+    display: flex;
+    text-decoration: none;
+    height: 80px;
+    margin-left: 0;
+}
+
+li a {
+    color: white;
+    padding-top: 15px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.left-side-nav a:active {
+    background-color: rgb(17, 17, 17);
+    height: 50px;
+}
+
+.left-side-nav a:hover {
+    color: black;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.time {
+    width: 100%;
+    height: 90px;
+    margin-left: 20px;
+    margin-right: 0;
+    border-bottom: 2px solid rgb(186, 183, 177);
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+#day {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 17px;
+}
+
+.transfer-form {
+    position: absolute;
+    top: 100px;
+    background-color: rgb(38, 79, 64);
+    left: 18%;
+    width: 60%;
+    height: 350px;
+    border-radius: 5px;
+}
+
+#title {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    background-color: rgb(10, 1, 58);
+    width: 100%;
+    height: 50px;
+    padding-left: 3px;
+    color: white;
+    font-size: 14px;
+}
+
+.transfer-inputs {
+    position: absolute;
+    top: 30%;
+    color: white;
+    left: 14%;
+}
+
+.transfer-inputs input {
+    width: 300px;
+    height: 30px;
+}
+
+#deposit {
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 30px;
+    height: 28px;
+    width: 140px;
+}
+
+/* End of transfer  CSS */
+
+/* The CSS for account page */
+
+.new-account-title {
+    position: absolute;
+    left: 19%;
+    top: 3px;
+}
+
+.account-panel {
+    position: absolute;
+    top: 40px;
+    width: 890px;
+    height: 40px;
+    border: 2px solid rgb(148, 145, 145);
+    padding-bottom: 3px;
+    padding-left: 5px;
+}
+
+.account-panel-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.new-account-form {
+    position: absolute;
+    top: 20%;
+    left: 19%;
+    width: 70%;
+    height: 350px;
+    display: flex;
+    background-color: rgb(234, 241, 241);
+    border: 2px solid rgb(148, 145, 145);
+}
+
+.new-account-titles {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 700px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.new-account-titles h4 {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    margin-top: 10px;
+    font-weight: bolder;
+    color: rgb(45, 42, 42);
+}
+
+.new-account-titles img {
+    margin-top: 7px;
+    margin-left: 10%;
+}
+
+.left-part {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    width: 40%;
+    display: flex;
+
+}
+
+.left-part input {
+    /* width: 180px;
+    margin-top: 10px;
+    margin-right: 10px; */
+}
+
+.left-part-form,
+.right-part-form {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+}
+
+.left-part-form label,
+.right-part-form label {
+    font-weight: 600;
+    color: #242222;
+}
+
+.left-part-form label,
+.left-part-form input,
+.left-part-form textarea,
+.right-part-form input,
+.right-part-form label {
+    margin-top: 10px;
+}
+
+.left-part-form textarea {
+    overflow: scroll;
+    resize: none;
+    width: 220px;
+}
+
+.left-part-form input,
+.right-part-form input {
+    width: 220px;
+    height: 26px;
+    border: 0.4px solid #828080;
+    border-top: 2.2px solid#383636;
+}
+
+.right-part {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    width: 40%;
+    display: flex;
+}
+
+.right-part-form button {
+    position: absolute;
+    top: 160px;
+    right: 0%;
+    background-color: rgb(199, 205, 210);
+    width: 220px;
+    height: 26px;
+    cursor: pointer;
+}
+
+/* End of account  CSS */
+
+/* CSS for cards */
+
+
+.card {
+    width: 45%;
+    height: 560px;
+    border: 2px solid rgb(148, 145, 145);
+    margin: 40px 0 0 40px;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.card input {
+    width: 83.2%;
+    height: 26px;
+}
+
+.card button {
+    height: 26px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #242222;
+    border-radius: 5px;
+}
+
+.card button:hover {
+    border-color: rgb(14, 123, 142);
+}
+
+.change-card-div {
+    width: 30%;
+    height: 560px;
+    border: 2px solid rgb(148, 145, 145);
+    margin: 40px 0 0 20px;
+    background-color: white;
+}
+
+.credit-card {
+    width: 95%;
+    height: 200px;
+    background-color: white;
+    margin-top: 10px;
+    border: 1.5px solid rgb(92, 90, 90);
+}
+
+.left img {
+    width: 60px;
+    height: 60px;
+    margin-left: 25px;
+}
+
+.left p {
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.bank-name {
+    position: absolute;
+    top: 24%;
+    right: 39%;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.card-details {
+    padding-top: 10px;
+}
+
+.card-details p {
+    font-weight: bolder;
+    color: #242222;
+}
+
+.change-pin-title {
+    width: 96%;
+    height: 30px;
+    border-bottom: 2px solid rgb(200, 198, 198);
+    margin: auto;
+}
+
+.change-pin-title p {
+    color: #1699e0;
+    font-weight: 600;
+    margin-left: 60px;
+}
+
+.pin-change-form {
+    margin: 40px 0 0 50px;
+}
+
+.pin-change-form form input {
+    width: 80%;
+    border: 0.4px solid #5e5d5d;
+    border-top: 2.1px solid #5e5d5d;
+}
+
+.pin-change-form form button {
+    background-color: #1714e8;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 46%;
+    color: white;
+    height: 30px;
+}
+
+/* End of css for cards */
+
+/* CSS for profile */
+
+.profile-container {
+    margin-left: 20px;
+}
+
+.profile-upper-part {
+    height: 90px;
+}
+
+.profile-upper-part p {
+    margin-top: 3px;
+    font-weight: 600;
+    color: #383636;
+}
+
+.profile-upper-part input {
+    width: 380px;
+    border: 1px solid#057ab9;
+    height: 25px;
+    border-radius: 2px;
+}
+
+.profile-upper-part button {
+    width: 150px;
+    cursor: pointer;
+    background-color: #cee2ec;
+    border: 1px solid #057ab9;
+    height: 25px;
+    border-radius: 4px;
+}
+
+.profile-lower-part {
+    width: 800px;
+    background-color: #040346;
+    height: 490px;
+    margin-top: 20px;
+    padding-top: 15px;
+}
+
+.profile-lower-part .image {
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    margin-left: 310px;
+    border-radius: 2px;
+}
+
+.profile-lower-part img {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+
+}
+
+.customer-profile-header {
+    width: 90%;
+    border-bottom: 2px solid #979595;
+    margin-left: 50px;
+    padding-bottom: 1px;
+
+}
+
+.customer-profile-header h2 {
+    color: white;
+}
+
+.customer-profile {
+    margin-top: 20px;
+    margin-left: 120px;
+    color: white;
+}
+
+.customer-profile p {
+    display: grid;
+    grid-template-columns: 0.26fr 0.26fr;
+    padding-top: 10px;
+}
+
+.customer-profile span {
+    font-weight: bolder;
+}
+
+/* End of profile css */
+
+/* CSS for card application */
+
+.card-application-form {
+    position: absolute;
+    top: 113px;
+    left: 26%;
+    width: 60%;
+    height: 140px;
+    background-color: #040346;
+    display: flex;
+    padding-top: 16px;
+    padding-left: 10px;
+}
+
+.card-application-form p {
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.card-application-form input {
+    width: 250px;
+    height: 30px;
+}
+
+.card-application-form #acc-type {
+    margin-left: 20px;
+}
+
+.card-application-form button {
+    width: 150px;
+    height: 26px;
+    margin-left: 18px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cards {
+    position: absolute;
+    top: 280px;
+    left: 26%;
+    width: 60%;
+    height: 320px;
+    display: flex;
+}
+
+.front-side,
+.back-side {
+    width: 45%;
+    height: 80%;
+    border: 1.5px solid #5e5c5c;
+    margin-left: 24px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.front-side img {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.front-side #card {
+    padding-left: 8px;
+    color: #5b5959;
+    font-weight: bold;
+}
+
+.front-side #card-no {
+    font-weight: bolder;
+    padding-left: 20px;
+}
+
+.front-side p {
+    padding-left: 20px;
+    color: #5b5959;
+    font-weight: bolder;
+}
+
+#issue-exp {
+    display: flex;
+    height: 30px;
+}
+
+#issue-exp p {
+    margin-top: 3px;
+}
+
+#issue-exp #exp {
+    margin-left: 80px;
+}
+
+#visa {
+    position: absolute;
+    top: 8px;
+    left: 40%;
+}
+
+.card-contacts {
+    width: 100%;
+    height: 50px;
+    padding-left: 5px;
+    font-size: 8px;
+    border: 1px solid #353536;
+}
+
+.card-contacts p {
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+.black-part {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+
+.signature {
+    width: 70%;
+    height: 50px;
+    border: 2px solid #595757;
+    border-radius: 4px;
+    text-align: center;
+    margin: 16px auto;
+    padding-top: 18px;
+}
+
+.signature-text {
+    width: 100%;
+    padding-left: 30px;
+}
+
+.signature-text p {
+    font-size: 12px;
+    font-weight: bolder;
+    color: #383636;
+}
+
+.signature-text h5 {
+    font-size: 10px;
+    font-weight: bolder;
+    color: #383636;
+}

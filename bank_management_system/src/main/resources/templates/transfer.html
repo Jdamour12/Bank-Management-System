@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Bank Management System</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main>
+    <div class="left-side-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a th:href="@{/transfer}">Transfer</a></li>
+        <li><a th:href="@{/account}">Account</a></li>
+        <li><a th:href="@{/cards}">Cards</a></li>
+        <li><a th:href="@{/profile}">Profile</a></li>
+        <li><a th:href="@{/apply_for_card}">Apply for Card</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+    <div  class="time">
+      <p id="day">Today: </p>
+    </div>
+
+    <div class="transfer-form">
+      <div id="title">
+        <h2>Kota Bank</h2>
+      </div>
+      <div class="transfer-inputs">
+        <form>
+          <p class="acc-number">Enter the account number</p>
+          <input class="acc-number-input"/>
+          <p class="acc-amount">Enter Amount</p>
+          <input class="amount-input"/>
+          <button id="deposit">Deposit Amount</button>
+        </form>
+      </div>
+    </div>
+    <main>
+  </body>
+</html>

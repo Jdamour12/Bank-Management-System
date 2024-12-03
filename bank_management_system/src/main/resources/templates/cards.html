@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Bank Management System</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main>
+    <div class="left-side-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a th:href="@{/transfer}">Transfer</a></li>
+        <li><a th:href="@{/account}">Account</a></li>
+        <li><a th:href="@{/cards}">Cards</a></li>
+        <li><a th:href="@{/profile}">Profile</a></li>
+        <li><a th:href="@{/apply_for_card}">Apply for Card</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+    <div class="card">
+        <p>Account No:</p>
+        <input type="number" name="account-number"/>
+        <button>Search</button>
+        <div class="credit-card">
+            <div class="left">
+                <p id="card">Credit Card</p>
+                <img src="/card.jpeg" alt=""/>
+                <p id="card-no">1234567890</p>
+                <p id="name">Jean D Amour</p>
+            </div>
+            <div class="bank-name">Kota</div>
+        </div>
+        <div class="card-details">
+            <p>Card Type: <span id="type">Saving</span></p>
+            <p>Card Number: <span id="card-no">123456789098765</span></p>
+            <p>CVV Number: <span id="cvv-no">487</span></p>
+            <p>Issue Date: <span id="issue-date">22/11/2024</span></p>
+            <p>Exp. Date: <span id="exp-date">2030</span></p>
+            <p>Balance: <span id="balance">40000</span></p>
+        </div>
+    </div>
+    <div class="change-card-div">
+        <div class="change-pin-title">
+            <p>Change Card PIN</p>
+        </div>
+        <div class="pin-change-form">
+            <form>
+                <p>Account Number</p>
+                <input type="text" name="account-no">
+                <p>Enter Old PIN</p>
+                <input type="text" name="old-pin">
+                <p>Enter New PIN</p>
+                <input type="text" name="new-pin">
+                <button>Change PIN</button>
+            </form>
+        </div>
+    </div>
+    <main>
+</body>
+</html>

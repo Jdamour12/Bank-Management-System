@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Bank Management System</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main>
+    <div class="left-side-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a th:href="@{/transfer}">Transfer</a></li>
+        <li><a th:href="@{/account}">Account</a></li>
+        <li><a th:href="@{/cards}">Cards</a></li>
+        <li><a th:href="@{/profile}">Profile</a></li>
+        <li><a th:href="@{/apply_for_card}">Apply for Card</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+    <div class="profile-container">
+      <div class="profile-upper-part">
+        <p>Today: </p>
+        <label>Account Number: </label>
+        <input type="text" name="account-no"/>
+        <button>Search</button>
+      </div>
+      <div class="profile-lower-part">
+        <div class="customer-profile-header">
+        <div class="image"><img src="/courthouse.png" alt=""/></div>
+        <h2 id="customer-name">Name</h2>
+        </div>
+        <div class="customer-profile">
+          <p>Account Number: <span id="account-no">Account Number</span></p>
+          <p>Amount: <span id="amount">Amount</span></p>
+          <p>Adhar Number: <span id="adhar-number">Adhar Number</span></p>
+          <p>PIN Number: <span id="pin-number">PIN Number</span></p>
+          <p>Account Type: <span id="account-type">Account Type</span></p>
+          <p>Email: <span id="email">Email</span></p>
+          <p>Address: <span id="address">Address</span></p>
+        </div>
+      </div>
+    </div>
+    <main>
+  </body>
+</html>
