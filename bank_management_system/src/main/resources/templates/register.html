@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Bank Management System</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="register-container">
+        <div class="register-title">
+          <h2>Create an Account to Kota Bank</h2>
+        </div>
+        <div class="register-form">
+          <form method="POST" th:object="${register}">
+            <p>Enter Username:</p>
+            <input type="text" name="username" required />
+            <p>Enter First Name:</p>
+            <input type="text" name="firstName" required />
+            <p>Enter Last Name:</p>
+            <input type="text" name="lastName" required />
+            <p>Enter Email:</p>
+            <input type="email" name="email" required />
+            <p>Enter Phone Number:</p>
+            <input type="number" name="phone" required />
+            <p>Enter Your Password:</p>
+            <input type="password" name="password" required />
+            <button>Create Account</button>
+          </form>
+          <div>
+            <p>Already have an Account? <a href="/login">Login</a></p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

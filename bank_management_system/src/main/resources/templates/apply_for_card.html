@@ -2,61 +2,73 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>Bank Management System</title>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <main>
-    <div class="left-side-nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a th:href="@{/transfer}">Transfer</a></li>
-        <li><a th:href="@{/account}">Account</a></li>
-        <li><a th:href="@{/cards}">Cards</a></li>
-        <li><a th:href="@{/profile}">Profile</a></li>
-        <li><a th:href="@{/apply_for_card}">Apply for Card</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
-    </div>
-    <div  class="time">
-        <p id="day">Today: </p>
-    </div>
+      <div class="left-side-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a th:href="@{/transfer}">Transfer</a></li>
+          <li><a th:href="@{/account}">Account</a></li>
+          <li><a th:href="@{/cards}">Cards</a></li>
+          <li><a th:href="@{/profile}">Profile</a></li>
+          <li><a th:href="@{/apply_for_card}">Apply for Card</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+      <div class="time">
+        <p id="day">Today:</p>
+      </div>
 
-    <div class="card-application-form">
-        <div>
+      <form method="POST" th:object="${cards}">
+        <div class="card-application-form">
+          <div>
             <p>Enter Account Number</p>
-            <input type="number" name="account-no"/>
-        </div>
-        <div id="acc-type">
+            <input name="accountNumber" />
+          </div>
+          <div id="acc-type">
             <p>Account Type</p>
-            <input type="text" name="type"/>
+            <select name="accountType">
+              <option value="savings"></option>
+              <option value="savings">Savings</option>
+              <option value="current">Current</option>
+              <option value="fixed deposit">Fixed Deposit</option>
+            </select>
             <button>Apply</button>
+          </div>
         </div>
-    </div>
-    <div class="cards">
+      </form>
+      <div class="cards">
         <div class="front-side">
-            <p id="card">Credit Card</p>
-            <img src="/card.jpeg" alt=""/>
-            <h4 id="card-no">Card No  Card No  Card No  Card No</h4>
-            <div id="issue-exp">
-                <p>Issue: <span id="issue-date"></span></p>
-                <p id="exp">Exp: <span id="exp-date"></span></p>
-            </div>
-            <p id="name">Name</p>
-            <div id="visa"><p>Visa</p></div>
+          <p id="card">Credit Card</p>
+          <img src="/card.jpeg" alt="" />
+          <h4 id="card-no">Card No Card No Card No Card No</h4>
+          <div id="issue-exp">
+            <p>Issue: <span id="issue-date"></span></p>
+            <p id="exp">Exp: <span id="exp-date"></span></p>
+          </div>
+          <p id="name">Name</p>
+          <div id="visa"><p>Visa</p></div>
         </div>
         <div class="back-side">
-            <div class="card-contacts">
-                <p>24 HOUR CUSTOMER CONTACT NUMBER: 0787171116/ 0790688113 / TOLL FREE: 1234</p>
-            </div>
-            <div class="black-part"></div>
-            <div class="signature">"</div>
-            <div class="signature-text">
-                <p>AUTHORIZED SIGNATURE - NOT TRANSFERABLE</P>
-                <h5>Not valid for payment in foreign exchange in India nepal and China</h5>
-            </div>
+          <div class="card-contacts">
+            <p>
+              24 HOUR CUSTOMER CONTACT NUMBER: 0787171116/ 0790688113 / TOLL
+              FREE: 1234
+            </p>
+          </div>
+          <div class="black-part"></div>
+          <div class="signature">"</div>
+          <div class="signature-text">
+            <p>AUTHORIZED SIGNATURE - NOT TRANSFERABLE</p>
+            <h5>
+              Not valid for payment in foreign exchange in India nepal and China
+            </h5>
+          </div>
         </div>
-    </div>
-    <main>
+      </div>
+    </main>
   </body>
 </html>

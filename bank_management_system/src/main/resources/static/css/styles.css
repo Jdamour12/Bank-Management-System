@@ -214,6 +214,7 @@ li a {
 }
 
 .left-part-form input,
+.left-part-form select,
 .right-part-form input {
     width: 220px;
     height: 26px;
@@ -454,9 +455,17 @@ li a {
     font-size: 20px;
 }
 
-.card-application-form input {
+.card-application-form input,
+.card-application-form select {
     width: 250px;
     height: 30px;
+    border-radius: 4px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .card-application-form #acc-type {
@@ -577,3 +586,109 @@ li a {
     font-weight: bolder;
     color: #383636;
 }
+
+/* CSS for Login page */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 35%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #383636;
+    margin: 40px auto;
+    border-radius: 5px;
+}
+
+.bank-title {
+    position: absolute;
+    top: 60px;
+    left: 40%;
+    width: 100%;
+    margin: auto;
+}
+
+.login-form,
+.register-form {
+    margin-left: 40px;
+    padding: auto;
+}
+
+.login-form input {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    width: 300px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #5e5d5d;
+}
+
+.login-form button {
+    width: 200px;
+    height: 35px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #72735a;
+    color: white;
+}
+
+.login-form a,
+register-form a {
+    text-decoration: none;
+}
+
+/* End of the CSS for login page */
+/* CSS for register page */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    width: 35%;
+    background-color: #f1f1f1;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: Arial, sans-serif;
+    color: #383636;
+    margin: 5px auto;
+    border-radius: 5px;
+}
+
+.register-title {
+    position: absolute;
+    top: -5px;
+    left: 37%;
+    width: 100%;
+    margin: auto;
+}
+
+.register-form p {
+    margin-bottom: 4px;
+}
+
+.register-form input {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 300px;
+    height: 25px;
+    border-radius: 4px;
+    border: 1px solid #5e5d5d;
+}
+
+.register-form button {
+    width: 200px;
+    height: 35px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    background-color: #72735a;
+    color: white;
+}
+
+/* End of the CSS for register page */

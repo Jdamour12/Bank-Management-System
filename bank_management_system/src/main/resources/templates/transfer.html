@@ -27,15 +27,15 @@
         <h2>Kota Bank</h2>
       </div>
       <div class="transfer-inputs">
-        <form>
+        <form method="POST" th:object="${transfer}">
           <p class="acc-number">Enter the account number</p>
-          <input class="acc-number-input"/>
+          <input class="acc-number-input" name="accountNumber" required/>
           <p class="acc-amount">Enter Amount</p>
-          <input class="amount-input"/>
+          <input class="amount-input" name="amount" required/>
           <button id="deposit">Deposit Amount</button>
         </form>
       </div>
     </div>
-    <main>
+  </main>
   </body>
 </html>

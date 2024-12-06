@@ -2,59 +2,68 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>Bank Management System</title>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <main>
-    <div class="left-side-nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a th:href="@{/transfer}">Transfer</a></li>
-        <li><a th:href="@{/account}">Account</a></li>
-        <li><a th:href="@{/cards}">Cards</a></li>
-        <li><a th:href="@{/profile}">Profile</a></li>
-        <li><a th:href="@{/apply_for_card}">Apply for Card</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
-    </div>
-    <div class="new-account-title">
-      <p id="">Today: </p>
-      <div class="account-panel">
-        <p class="account-panel-title">
-            Account Panel || Create New Account
-        </p>
-        </div> 
-    </div>
+      <div class="left-side-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a th:href="@{/transfer}">Transfer</a></li>
+          <li><a th:href="@{/account}">Account</a></li>
+          <li><a th:href="@{/cards}">Cards</a></li>
+          <li><a th:href="@{/profile}">Profile</a></li>
+          <li><a th:href="@{/apply_for_card}">Apply for Card</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+      <div class="new-account-title">
+        <p>Today:</p>
+        <div class="account-panel">
+          <p class="account-panel-title">Account Panel || Create New Account</p>
+        </div>
+      </div>
 
-    <div class="new-account-form">
+      <div class="new-account-form">
         <div class="new-account-titles">
-            <h4>Pass Book</h4>
-            <img src="/courthouse.png" alt="court-image"/>
-            <h4>Kota Bank</h4>
+          <h4>Pass Book</h4>
+          <img src="/courthouse.png" alt="court-image" />
+          <h4>Kota Bank</h4>
         </div>
-        <div class="left-part">
-            <form class="left-part-form">
-                <label>Account Type</label><input Type="text" name="account-type"/>
-                <label>PAN Number</label><input Type="number" name="pan-number"/>
-                <label>Account Number</label><input Type="number" name="account-number"/>
-                <label>Customer Name</label><input Type="text" name="customer-name"/>
-                <label>Address</label><textarea rows="2" cols="30" name="address"></textarea>
-                <label>Adler Number</label><input Type="number" name="adler number"/>
-            </form>
-        </div>
-        <div class="right-part">
-            <form class="right-part-form">
-                <label>Phone</label><input Type="number" name="customer-phone"/>
-                <label>Email</label><input Type="email" name="customer-email"/>
-                <label>IF8C</label><input Type="number" name="customer-ifc"/>
-                <label>Amount Deposit</label>
-                <input Type="number" name="customer-deposit"/>
-                <button>Create Account</button>
-            </form>
-        </div>
+        <form method="POST" th:object="${account}">
+          <div class="left-part">
+            <div class="left-part-form">
+              <label>Account Type</label>
+              <select name="accountType">
+                <option value="savings"></option>
+                <option value="savings">Savings</option>
+                <option value="current">Current</option>
+                <option value="fixed deposit">Fixed</option>
+              </select>
+              <label>PAN Number</label
+              ><input type="number" name="PANNumber" required />
+              <label>Account Number</label
+              ><input name="accountNumber" required />
+              <label>Customer Name</label
+              ><input name="customerName" required /> <label>Address</label
+              ><textarea rows="2" cols="30" name="address" required></textarea>
+              <label>Adhar Number</label><input name="adharNumber" required />
+            </div>
+          </div>
+          <div class="right-part">
+            <div class="right-part-form">
+              <label>Phone</label><input type="number" name="phone" required />
+              <label>Email</label><input type="email" name="email" required />
+              <label>IF8C</label><input Type="number" name="if8c" required//>
+              <label>Amount Deposit</label>
+              <input type="number" name="customer-deposit" disabled />
+              <button onclick="submitBothForms()">Create Account</button>
+            </div>
+          </div>
+        </form>
         <div class="right-part"></div>
-    </div>
-    <main>
+      </div>
+    </main>
   </body>
 </html>

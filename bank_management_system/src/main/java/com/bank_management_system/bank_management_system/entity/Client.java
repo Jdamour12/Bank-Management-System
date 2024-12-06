@@ -27,17 +27,6 @@ public class Client {
     @Column(name = "password", nullable = false)
     private String password;
 
-    public Client(){}
-
-    public Client(String username, String firstName, String lastName, String email, String phone, String password) {
-        this.username = username;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.phone = phone;
-        this.password = password;
-    }
-
     public String getUsername() {
         return username;
     }
